@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Face Attendance Web</title>
+  <link rel="stylesheet" href="../static/style.css" />
+</head>
+<body>
+
+  <!-- Top Bar -->
+  <header class="topbar">
+    <div class="brand">
+      <div class="logo">✅</div>
+      <div>
+        <div class="title">Face Attendance Web</div>
+        <div class="subtitle">Live camera + face recognition</div>
+      </div>
+    </div>
+
+    <div class="actions">
+      <a href="/attendance" class="btn primary">Attendance Table</a>
+    </div>
+  </header>
+
+  <!-- Main Grid -->
+  <main class="grid">
+
+    <!-- Camera Card -->
+    <section class="card camera">
+      <div class="card-head">
+        <div class="card-title">Camera (Live)</div>
+        <div class="pill good">Running</div>
+      </div>
+
+      <div class="video-wrap">
+        <img id="stream" src="/video_feed" alt="camera stream" />
+      </div>
+
+      <div class="card-foot">
+        <div class="mini">
+          <div class="mini-label">Date</div>
+          <div class="mini-value" id="today">—</div>
+        </div>
+        <div class="mini">
+          <div class="mini-label">Present</div>
+          <div class="mini-value good" id="presentCount">—</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Present Today -->
+    <section class="card list">
+      <div class="card-head">
+        <div class="card-title">Present Today</div>
+        <div class="pill good" id="presentPill">—</div>
+      </div>
+
+      <div class="table">
+        <div class="row head">
+          <div>Name</div>
+          <div>Time</div>
+        </div>
+        <div id="presentList"></div>
+      </div>
+    </section>
+
+    <!-- Add Person -->
+    <section class="card list">
+      <div class="card-head">
+        <div class="card-title">Add New Person</div>
+      </div>
+
+      <div class="table">
+        <div class="row item">
+          <div>Add from image</div>
+          <div><button id="btnAddFromImage" class="btn">Upload</button></div>
+        </div>
+
+        <div class="row item">
+          <div>Add from camera (Unknown)</div>
+          <div><button id="btnAddFromCamera" class="btn">Add</button></div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <span>Status</span>
+    <span class="sep">•</span>
+    <span id="statusText">—</span>
+  </footer>
+
+  <!-- App JS -->
+  <script src="/static/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Attendance Table</title>
+  <link rel="stylesheet" href="/static/style.css" />
+</head>
+<body>
+
+  <!-- Top Bar -->
+  <header class="topbar">
+    <div class="brand">
+      <div class="logo">📊</div>
+      <div>
+        <div class="title">Attendance</div>
+        <div class="subtitle">Search & export attendance records</div>
+      </div>
+    </div>
+
+    <div class="actions">
+      <a href="/" class="btn">Back to Camera</a>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="grid">
+    <section class="card">
+      <div class="card-head">
+        <div class="card-title">Attendance Table</div>
+      </div>
+
+      <!-- Controls -->
+      <div class="card-foot">
+        <input type="date" id="dateInput" class="btn" />
+
+        <!-- زرار عرض حضور النهارده -->
+        <button id="btnToday" class="btn">Today</button>
+
+        <button id="btnSearch" class="btn primary">Search</button>
+        <button id="btnDownload" class="btn">Download CSV</button>
+      </div>
+
+      <!-- Table -->
+      <div class="table">
+        <div class="row head">
+          <div>Name</div>
+          <div>Time</div>
+        </div>
+
+        <div id="tableBody">
+          <!-- rows injected by JS -->
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <span>Attendance Page</span>
+  </footer>
+
+  <!-- JS منفصل -->
+  <script src="/static/attendance.js"></script>
+</body>
+</html>
